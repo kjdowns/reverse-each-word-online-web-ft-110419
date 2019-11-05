@@ -1,3 +1,4 @@
+#using each
 def reverse_each_word(sentence)
   word_array = sentence.split
   reverse_array = []
@@ -5,4 +6,10 @@ def reverse_each_word(sentence)
     reverse_array << word.reverse
   end
   reverse_array.join(" ")
+end
+
+#using collect 
+def reverse_each_word(sentence)
+  word_array = sentence.split
+  (word_array.map {|word| word.reverse}).join
 end
